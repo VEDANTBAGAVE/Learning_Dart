@@ -1,0 +1,40 @@
+void main() {
+  // Creating an object of the Car class
+  Car myCar = Car('Toyota', 'Camry', 2023);
+
+  // Accessing object properties
+  print('Car Make: ${myCar.make}');
+  print('Car Model: ${myCar.model}');
+  print('Car Year: ${myCar.year}');
+
+  // Calling a method on the object
+  myCar.start();
+  myCar.drive();
+  myCar.stop();
+}
+
+// Defining a Car class
+class Car {
+  // Fields (properties)
+  String make;
+  String model;
+  int year;
+
+  // Constructor
+  Car(this.make, this.model, this.year);
+
+  // Method to start the car
+  void start() {
+    print('$make $model is starting.');
+  }
+
+  // Method to drive the car
+  void drive() {
+    print('$make $model is driving.');
+  }
+
+  // Method to stop the car
+  void stop() {
+    print('$make $model has stopped.');
+  }
+}
