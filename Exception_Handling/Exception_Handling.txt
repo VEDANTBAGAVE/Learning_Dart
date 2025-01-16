@@ -1,0 +1,56 @@
+Exception handling in Dart is a way to manage errors or unexpected events during runtime. 
+It ensures that your program can respond gracefully to these situations rather than crashing.
+
+Key Components of Exception Handling in Dart
+**try Block**: Contains code that might throw an exception.
+**catch Block**: Handles the exception and defines what to do if an exception occurs.
+**on Block**: Handles specific types of exceptions.
+**finally Block**: Contains code that is always executed, regardless of whether an exception occurred or not.
+
+**Syntax:**
+try {
+  // Code that might throw an exception
+} on SpecificException {
+  // Handle specific exception
+} catch (e, s) {
+  // Handle any exception
+  // 'e' contains the exception details
+  // 's' contains the stack trace
+} finally {
+  // Code that will always execute
+}
+
+
+**Key Points**:
+on: Use it to handle specific types of exceptions.
+catch: Use it to handle general exceptions.
+finally: Always executes, useful for cleanup tasks like closing files or connections.
+Stack Trace: Helps debug by showing where the exception occurred.
+
+
+1. Built-in Exceptions
+Dart comes with several predefined exceptions to handle common error scenarios.
+
+Common Built-in Exceptions:
+Exception	                        Description
+IntegerDivisionByZeroException	    Thrown when dividing an integer by zero.
+FormatException	                    Thrown when a string is not in the expected format (e.g., invalid number).
+NoSuchMethodError	                Thrown when a method or property is accessed on an object but does not exist.
+UnsupportedError	                Thrown when a requested operation is not supported.
+StateError	                        Thrown when a function is called in an invalid state.
+RangeError	                        Thrown when an index is out of range.
+ArgumentError	                    Thrown when a function is provided with invalid arguments.
+TypeError	                        Thrown when a value of the wrong type is used.
+AssertionError	                    Thrown when an assert statement fails.
+CastError	                        Thrown when a type cast fails.
+
+
+2. System-Defined Errors
+Dart also provides error types that are typically thrown by the Dart runtime and should not be caught in normal applications.
+
+Examples of Errors:
+Error	                            Description
+OutOfMemoryError	                Thrown when the program runs out of memory.
+StackOverflowError	                Thrown when the program exceeds the call stack limit.
+AbstractClassInstantiationError	    Thrown when an abstract class is attempted to be instantiated.
+ConcurrentModificationError	        Thrown when a collection is modified during iteration.                          
